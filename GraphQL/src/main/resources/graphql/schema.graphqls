@@ -1,0 +1,51 @@
+type Visa {
+    id: Int
+    numeroVisa: String
+    pays: String
+    dateEmission: String
+    dateExpiration: String
+    titulaireNom: String
+    titulairePrenom: String
+    passportNumero: String
+    typeVisa: String
+    statut: String
+    document: Document
+}
+
+type Document {
+    id: Int
+    type: String
+    contenu: String
+}
+
+type Query {
+    getVisas: [Visa]
+    getVisa(id: ID!): Visa
+    getDocuments: [Document]
+    getDocument(id: ID!): Document
+}
+
+input DocumentInput {
+    id:Int
+    type: String
+    contenu: String
+}
+
+input VisaInput {
+    id:Int
+    numeroVisa: String
+    pays: String
+    dateEmission: String
+    dateExpiration: String
+    titulaireNom: String
+    titulairePrenom: String
+    passportNumero: String
+    typeVisa: String
+    statut: String
+    documentId: Int
+}
+
+type Mutation {
+    addVisa(documentId: Int, visa: VisaInput): Visa
+    addDocument(document: DocumentInput): Document
+}

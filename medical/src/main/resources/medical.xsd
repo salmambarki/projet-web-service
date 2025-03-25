@@ -1,0 +1,66 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/soapservice"
+           xmlns="http://example.com/soapservice"
+           elementFormDefault="qualified">
+
+    <!-- Demande de dossiers médicaux -->
+    <xs:element name="GetMedicalRecordsRequest" type="xs:string"/>
+
+    <!-- Réponse avec les dossiers médicaux -->
+    <xs:element name="GetMedicalRecordsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="MedicalRecord" type="MedicalRecordType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Demande de création de dossier médical -->
+    <xs:element name="CreateMedicalRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="patientName" type="xs:string"/>
+                <xs:element name="diagnosis" type="xs:string"/>
+                <xs:element name="date" type="xs:date"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Réponse de création de dossier médical -->
+    <xs:element name="CreateMedicalResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="medical" type="MedicalRecordType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Demande de recherche de dossier médical par ID -->
+    <xs:element name="GetMedicalByIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Réponse de recherche de dossier médical par ID -->
+    <xs:element name="GetMedicalByIdResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="medical" type="MedicalRecordType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Définition du type de dossier médical -->
+    <xs:complexType name="MedicalRecordType">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="patientName" type="xs:string"/>
+            <xs:element name="diagnosis" type="xs:string"/>
+            <xs:element name="date" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

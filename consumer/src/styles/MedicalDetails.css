@@ -1,0 +1,64 @@
+/* MedicalDetails.css */
+
+/* Container styling */
+.medical-details-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+.medical-details-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form group styling */
+.medical-details-container .form-group {
+    margin-bottom: 15px;
+}
+
+/* Input styling */
+.medical-details-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Button styling */
+.medical-details-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.medical-details-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Display details styling */
+.medical-details-container .medical-info {
+    margin-top: 20px;
+}
+
+.medical-details-container .medical-info h3 {
+    color: #333;
+}
+
+.medical-details-container .medical-info p {
+    font-size: 16px;
+    color: #555;
+}

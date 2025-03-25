@@ -1,0 +1,61 @@
+/* Style général pour le conteneur */
+.document-list-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Style pour le titre */
+  .document-list-container h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Style pour la liste des documents */
+  .document-list-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Style pour chaque élément de la liste */
+  .document-list-container ul li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Style pour le texte du document */
+  .document-list-container ul li p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Style pour le bouton de téléchargement */
+  .document-list-container ul li button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .document-list-container ul li button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style pour le bouton de téléchargement lorsqu'il est désactivé */
+  .document-list-container ul li button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }

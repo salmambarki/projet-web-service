@@ -1,0 +1,44 @@
+/* styles/ListeDocument.css */
+
+.document-list-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .document-list-title {
+    text-align: center;
+    color: #333;
+  }
+  
+  .document-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .document-list-item {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+  }
+  
+  .document-list-item p {
+    margin: 0;
+    color: #555;
+  }
+  
+  .document-list-item span {
+    font-weight: bold;
+    color: #333;
+  }
+  
